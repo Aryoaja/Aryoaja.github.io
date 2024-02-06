@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Website mpi dan ayyo</title>
+    <style>
+        /* Gaya CSS lainnya di sini */
+        #content article {
+            display: none;
+        }
+
+        #content article.active {
+            display: block;
+        }
+
+    
+        #content article {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Add transitions */
+        }
+
+        #content {
+            padding: 20px;
+            opacity: 0;
+            animation: fadeIn 0.5s ease-in-out forwards; /* Animation for initial fade-in */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        #content article {
+            display: none;
+            opacity: 0;
+            animation: fadeInOut 0.5s ease-in-out forwards; /* Animation for fade-out and fade-in */
+        }
+
+        @keyframes fadeInOut {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header-with-bg {
+            background-image: url('awal ketemu lagi.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+            background-size: cover;
+            background-position: center;
+            min-height: 300px; /* Adjust the minimum height as needed */
+            padding: 20px;
+            text-align: center;
+            color: #fff; /* Change the text color as needed */
+        }
+    
+</style>
+</head>
+<body>
+    <header class="header-with-bg">
+        <h1>Selamat Datang di Website mpi dan ayyo</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showPage('article1')">Beranda</a></li>
+            <li><a href="#" onclick="showPage('bogor')">Healing</a></li>
+            <li><a href="#" onclick="showPage('article3')">Tentang Kita</a></li>
+            <li><a href="#" onclick="showPage('article4')">Visi dan Misi</a></li>
+            <!-- Tambahkan atribut onclick yang serupa untuk halaman lainnya -->
+        </ul>
+    </nav>
+    
+    <section id="content">
+        <article id="article1" class="active">
+            <figure>
+                <h2>Bukti Bahwa Kita Benar-Benar Saling Mencintai</h2>
+            <p>Meskipun kita banyak melewati berbagai rintangan dan cobaan tapi kita bisa melewati semuanya.</p>
+                <img src="awal ketemu lagi.jpg" alt="Hujan Menjadi Saksi">
+                <figcaption></figcaption>
+            </figure>
+            <figure>
+                <img src="ketemu.jpg" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <!-- Tambahkan figure dan img sesuai kebutuhan -->
+            <figure>
+            <h2>Hujan Menjadi Saksi</h2>
+                <figcaption>Hujan menjadi saksi bahwa betapa bahagianya kita ketika sedang bersama.</figcaption>
+                <img src="hujan1.jpg">
+            </figure>
+                <img src="hujan2.jpg" alt="Deskripsi Gambar Lainnya">
+                <figure>
+                    <figure>
+                <h2>Yang Penting Makan</h2>
+                    <figcaption>Meskipun setiap makanan berbeda rasa tetapi cintaku padamu tidak akan pernah berubah ko xixi.</figcaption>
+                        <img src="gacoan.jpg">
+                    </figure>
+                        <img src="lawsoun.jpg" alt="Deskripsi Gambar Lainnya">
+                    <figure>
+                        <img src="gacoan1.jpg" alt="Deskripsi Gambar Lainnya">
+                    <figure>
+                        <img src="gacoan2.jpg" alt="Deskripsi Gambar Lainnya">
+                    <figure>
+                
+        </article>
+        
+        <article id="bogor"> 
+            <h2>Healing Bareng Kamu</h2>
+            <p>Sudah banyak tempat yang telah kita kunjungi tapi menurutku tempat ternyaman ya bersama kamu.</p>
+
+            <figure>
+                <img src="healing.jpg" alt="Artikel 2 - Image 1">
+                <figcaption>Monas</figcaption>
+            </figure>
+            <figure>
+                <img src="bogor1.jpg" alt="Artikel 2 - Image 2">
+                <figcaption>Bogor 16-10-2022</figcaption>
+            </figure>
+            <figure>
+                <img src="bogor2.jpg" alt="Artikel 2 - Image 3">
+                <figcaption>Bogor 16-10-2022</figcaption>
+            </figure>
+            <figure>
+                <img src="bioskop.jpg" alt="Artikel 2 - Image 3">
+                <figcaption>Bioskop 30-09-2022</figcaption>
+            </figure>
+            <figure>
+                <img src="ragunan.jpg" alt="Artikel 2 - Image 3">
+                <figcaption>Ragunan 07-09-2023</figcaption>
+            </figure>
+        </article>        
+
+        <article id="article3">
+            <img src="article2.jpg" alt="Artikel 3">
+            <h2>Siapa Kami?</h2>
+            <p>Kami adalah tim yang berkomitmen untuk memberikan informasi terkini dan bermanfaat kepada pengunjung website kami. Dengan pengalaman dan keahlian dalam berbagai bidang, kami siap menyajikan konten yang relevan dan berkualitas.</p>
+        </article>
+
+        <article id="article4">
+            <h2>Visi-Misi</h2>
+            <p>Visi-misi kita.</p>
+        </article>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Website mpi dan ayyo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            var content = document.getElementById('content');
+            content.style.animation = 'fadeOut 0.5s ease-in-out forwards'; // Animation for fade-out
+
+            setTimeout(function () {
+                // Set the active page after the fade-out animation completes
+                var pages = document.querySelectorAll('#content article');
+                for (var i = 0; i < pages.length; i++) {
+                    pages[i].classList.remove('active');
+                }
+
+                var selectedPage = document.getElementById(pageId);
+                if (selectedPage) {
+                    selectedPage.classList.add('active');
+                }
+
+                // Reset the animation and trigger the fade-in animation
+                content.style.animation = 'fadeIn 0.5s ease-in-out forwards';
+            }, 500); // Adjust the timeout duration based on your animation duration
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Reset CSS */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+header, nav, section, footer {
+    margin: 20px;
+}
+
+.header-with-bg {
+    background-image: url('awal ketumu lagi.jpg'); /* Replace 'your-background-image.jpg' with your image file path */
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+    color: #fff; /* Change the text color as needed */
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+}
+
+header img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #02ccff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px; /* Add padding to the links */
+    border-radius: 5px; /* Add rounded corners to the links */
+    transition: background-color 0.3s ease; /* Add a smooth background color transition */
+}
+
+nav a:hover {
+    background-color: #00e1ff; /* Change the background color on hover */
+}
+
+
+#audioContainer {
+    max-width: 300px; /* Atur lebar maksimum */
+    margin: 20px; /* Atur margin */
+}
+
+/* Gaya CSS untuk tombol kontrol audio */
+#audioContainer audio {
+    width: 100%; /* Sesuaikan lebar dengan kontainer */
+    display: block;
+}
+
+/* Gaya CSS untuk deskripsi audio */
+#audioDescription {
+    font-style: italic;
+    color: #00fff2;
+}
+
+/* Content Styles */
+#content {
+    margin-top: 20px;
+}
+
+article {
+    margin-bottom: 20px;
+    background-color: #ff0000;
+    padding: 20px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+article img {
+    max-width: 30%;
+    height: auto;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Additional Styles for Active Article */
+#content article.active {
+    background-color: #ffffff;
+}
